@@ -4,21 +4,18 @@ const Title = styled.h1`
   display: flex;
   justify-content: center;
   font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.secondary};
 `
 
-const TitleTwo = styled.h2`
-  display: flex;
-  justify-content: center;
-  font-size: 30px;
-  color: ${({ theme }) => theme.colors.primary};
-`
+// O Styled component cria essa função com props e children automaticamente
+// function Title(props) {
+//   return <h1>{props.children}</h1>
+// }
 
 export default function Home() {
   return (
     <>
-      <Title>My Title</Title>
-      <TitleTwo>My subtitle</TitleTwo>
+      <Title>My app</Title>
     </>
   )
 }
