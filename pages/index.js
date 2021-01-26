@@ -4,7 +4,7 @@ const Title = styled.h1`
   display: flex;
   justify-content: center;
   font-size: 50px;
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.primary};
 `
 
 // O Styled component cria essa função com props e children automaticamente
@@ -15,7 +15,7 @@ const Title = styled.h1`
 export default function Home() {
   return (
     <>
-      <Title>My app</Title>
+      <Title>My page</Title>
     </>
   )
 }
