@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Widget from '../src/components/Widget';
 import Footer from '../src/components/Footer';
+import GitHubCorner from '../src/components/GitHubCorner';
 import db from '../db.json';
 
 const BackgroundImage = styled.div`
