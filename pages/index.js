@@ -1,16 +1,10 @@
 import styled from 'styled-components'
-import Widget from '../src/components/Widget';
-import Footer from '../src/components/Footer';
-import GitHubCorner from '../src/components/GitHubCorner';
-import QuizBackground from '../src/components/QuizBackground';
 import db from '../db.json';
-
-// const BackgroundImage = styled.div`
-//   background-image: url(${db.bg});
-//   flex: 1;
-//   background-size: cover;
-//   background-position: center;
-// `;
+import Widget from '../src/components/Widget'
+import QuizLogo from '../src/components/QuizLogo'
+import QuizBackground from '../src/components/QuizBackground'
+import Footer from '../src/components/Footer'
+import GitHubCorner from '../src/components/GitHubCorner'
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -27,27 +21,26 @@ export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
+        <QuizLogo />
         <Widget>
           <Widget.Header>
-            <h1>Title</h1>
+            <h1>{db.title}</h1>
           </Widget.Header>
           <Widget.Content>
-            <p>asdfasdfasdfsadfsadfsadfsadfs</p>
+            <p>{db.description}</p>
           </Widget.Content>
         </Widget>
 
-
         <Widget>
-          <Widget.Header>
-            <h1>Title</h1>
-          </Widget.Header>
           <Widget.Content>
-            <p>asdfasdfasdfsadfsadfsadfsadfs</p>
+            <h1>Quiz</h1>
+
+            <p>Base exemplo...</p>
           </Widget.Content>
         </Widget>
-        <Footer></Footer>
+        <Footer />
       </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/FredHorizon?tab=repositories"></GitHubCorner>
+      <GitHubCorner projectUrl="https://github.com/omariosouto" />
     </QuizBackground>
   );
 }
